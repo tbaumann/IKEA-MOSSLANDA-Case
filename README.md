@@ -12,6 +12,8 @@ This case will fit straight into the space of the shelves.
 
 Download [STL file](./generated/Case.stl)
 
+Download [3MF file](./generated/Case.3mf)
+
 ## Code
 
 ```yaml
