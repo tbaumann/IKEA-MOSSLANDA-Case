@@ -12,9 +12,15 @@ wall_thickness = 2.5;
 slots_left = 12;
 slots_front = 15;
 
+include <Chamfers-for-OpenSCAD/Chamfer.scad>;
+    
+
+
+
 // Rough box
-difference() {
-    cube([depth,width,height]);
+color("white") difference() {
+    //cube([depth,width,height]);
+    chamferCube([depth,width,height], [[0, 0, 1, 1], [0, 1, 1, 0], [1, 1, 1, 1]], 1);
     
     // Make hollow
     translate([wall_thickness, wall_thickness, 0])
@@ -34,7 +40,6 @@ difference() {
     airholes_left();
     airholes_front();
 }
-
 
 
 module airholes_front(){
